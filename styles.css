@@ -1,0 +1,32 @@
+/* Basic Notion-like colorful styling */
+body {
+    font-family: 'Avenir Next', 'Avenir', sans-serif;
+    background-color: #f5f6f7;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero.is-primary {
+    background-color: #2F80ED; /* Notion Blue */
+}
+
+.button.is-light {
+    background-color: #FFF;
+    color: #2F80ED;
+}
+/* Pricing Cards Styling */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-content {
+    padding: 20px;
+}
