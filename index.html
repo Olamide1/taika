@@ -361,8 +361,13 @@
             <h3 class="title is-3">Get in Touch</h3>
             <p>Ready to start your next project? Share some details and we'll get back to you soon!</p>
 
+            <article id="feedback-article" class="message is-danger" style="display: none">
+                <div class="message-body" id="feedback-div">
+                </div>
+            </article>
+
             <!-- Note the onsubmit event added below -->
-            <form action="sendEmail()" method="post" enctype="text/plain" class="mt-6">
+            <form id="submit-form" class="mt-6">
                 <div class="field">
                     <label class="label">Name</label>
                     <div class="control">
@@ -408,23 +413,55 @@
     <script src="scripts.js"></script>
 
     <script>
-        function sendEmail() {
-            const name = document.querySelector("[name='name']").value;
-            const email = document.querySelector("[name='email']").value;
-            const summary = document.querySelector("[name='summary']").value;
-
-            const subject = "New project inquiry from " + name;
-            const body = "Name: " + name + "%0D%0A" +
-                "Email: " + email + "%0D%0A" +
-                "Project Summary: " + summary;
-
-            window.location.href = "mailto:theolaakomolafe@gmail.com?subject=" + subject + "&body=" + body;
-        }
         function redirectToCalendly() {
             setTimeout(function () {
                 window.location.href = 'https://calendly.com/theakomolafe';
             }, 1000); // Waits 1 second to redirect
         }
+        function sendEmail(e) {
+
+            e.preventDefault();
+
+            const name = document.querySelector("[name='name']").value;
+            const email = document.querySelector("[name='email']").value;
+            const summary = document.querySelector("[name='summary']").value;
+
+            const subject = "New project inquiry from " + name;
+            const body = "Name: " + name + "\\n" +
+                "Email: " + email + "\\n" +
+                "Project Summary: " + summary;
+
+            fetch('http://localhost:3000/custom/taika/send-email', {
+                method: "POST",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    subject, body, email
+                }), // body data type must match "Content-Type" header
+            }).then(function (response) {
+                return response.json()
+            }).then(function (data) {
+                console.log(data)
+
+                redirectToCalendly()
+            }).catch(error => {
+                const feedbackArticle = document.getElementById('feedback-article');
+                const feedbackDiv = document.getElementById('feedback-div');
+                feedbackDiv.innerText = 'Sorry an error occurred. We didn\'t receive that.'
+
+                feedbackArticle.style.display = 'block'
+
+                setTimeout(() => {
+                    feedbackArticle.style.display = 'none'
+                    feedbackDiv.innerText = ''
+                }, 5000)
+            });
+        }
+
+        const form = document.getElementById('submit-form');
+        form.addEventListener("submit", sendEmail);
     </script>
 </body>
 
