@@ -413,10 +413,9 @@
     <script src="scripts.js"></script>
 
     <script>
+        // TODO: We need to add a loader after the submit button has been clicked.
         function redirectToCalendly() {
-            setTimeout(function () {
-                window.location.href = 'https://calendly.com/theakomolafe';
-            }, 1000); // Waits 1 second to redirect
+            window.location.href = 'https://calendly.com/theakomolafe';
         }
         function sendEmail(e) {
 
@@ -427,8 +426,8 @@
             const summary = document.querySelector("[name='summary']").value;
 
             const subject = "New project inquiry from " + name;
-            const body = "Name: " + name + "\\n" +
-                "Email: " + email + "\\n" +
+            const body = "Name: " + name + ". " +
+                "Email: " + email + ". " +
                 "Project Summary: " + summary;
 
             fetch('http://localhost:3000/custom/taika/send-email', {
