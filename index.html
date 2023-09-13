@@ -469,6 +469,11 @@
     <script src="scripts.js"></script>
 
     <script>
+        let baseEmailServiceUrl = 'https://yosei-aea83cf6fa05.herokuapp.com'
+        if (window.location.protocol == 'file:') { // safer than != 'https:'
+            baseEmailServiceUrl = 'http://localhost:3000'
+        }
+
         function redirectToCalendly() {
             window.location.href = 'https://calendly.com/theolaakomolafe/meet-with-taika';
         }
@@ -516,7 +521,7 @@
                 "Project Summary: " + summary;
 
             // https://yosei-aea83cf6fa05.herokuapp.com/custom/taika/send-email | http://localhost:3000/custom/taika/send-email
-            fetch('https://yosei-aea83cf6fa05.herokuapp.com/custom/taika/send-email', {
+            fetch(`${baseEmailServiceUrl}/custom/taika/send-email`, {
                 method: "POST",
                 mode: "cors",
                 headers: {
