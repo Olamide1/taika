@@ -505,6 +505,18 @@
             }
         }
 
+        function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11332957548/NE7bCNHt5eAYEOzq_Jsq',
+          'event_callback': callback
+      });
+      return false;
+    }
         function sendEmail(e) {
 
             e.preventDefault();
@@ -546,20 +558,11 @@
                 showSendEmailError()
             });
         }
-        gtag("event", "form_submit", {
-  form_id: "submit-form",
-  form_name: null,
-  form_destination: "https://taikalabs.tech/?gtm_debug=1694595067519#" +
-                    "contact",
-  form_length: 4,
-  form_submit_text: undefined,
-  event_callback: "Function",
-  send_to: "AW-11332957548"
-})
+
 
         const form = document.getElementById('submit-form');
         form.addEventListener("submit", sendEmail);
     </script>
 </body>
-
+    
 </html>
