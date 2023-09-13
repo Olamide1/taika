@@ -526,6 +526,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             e.preventDefault();
 
             toggleSubmitButtonLoader()
+            gtag_report_conversion('#')
 
             const name = document.querySelector("[name='name']").value;
             const email = document.querySelector("[name='email']").value;
@@ -566,7 +567,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
         const form = document.getElementById('submit-form');
         form.addEventListener("submit", sendEmail);
-        gtag_report_conversion('http://taikalabs.tech')
     </script>
 </body>
     
