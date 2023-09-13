@@ -546,6 +546,16 @@
                 showSendEmailError()
             });
         }
+        gtag("event", "form_submit", {
+  form_id: "submit-form",
+  form_name: null,
+  form_destination: "https://taikalabs.tech/?gtm_debug=1694595067519#" +
+                    "contact",
+  form_length: 4,
+  form_submit_text: undefined,
+  event_callback: "Function",
+  send_to: "AW-11332957548"
+})
 
         const form = document.getElementById('submit-form');
         form.addEventListener("submit", sendEmail);
