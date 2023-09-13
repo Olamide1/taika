@@ -36,6 +36,23 @@
         gtag('config', 'AW-11332957548');
     </script>
 
+<!-- Event snippet for Enquiry submission conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11332957548/NE7bCNHt5eAYEOzq_Jsq',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    
     <style>
         #submit-email-button {
             min-width: 90px;
@@ -504,19 +521,6 @@
                 submitEmailButton.lastElementChild.style.display = 'none'
             }
         }
-
-        function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-11332957548/NE7bCNHt5eAYEOzq_Jsq',
-          'event_callback': callback
-      });
-      return false;
-    }
         function sendEmail(e) {
 
             e.preventDefault();
@@ -562,6 +566,7 @@
 
         const form = document.getElementById('submit-form');
         form.addEventListener("submit", sendEmail);
+        gtag_report_conversion('http://taikalabs.tech')
     </script>
 </body>
     
