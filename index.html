@@ -9,26 +9,52 @@
     <title>Taika by Placeholder.</title>
 
     <!-- Paste this right before your closing </head> tag -->
-<script type="text/javascript">
-    (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-    for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+    <script type="text/javascript">
+        (function (f, b) {
+            if (!b.__SV) {
+                var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) {
+                    function g(a, d) { var b = d.split("."); 2 == b.length && (a = a[b[0]], d = b[1]); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))) } } var a = b; "undefined" !== typeof c ? a = b[c] = [] : c = "mixpanel"; a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d }; a.people.toString = function () { return a.toString(1) + ".people (stub)" }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+                    for (h = 0; h < i.length; h++)g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]) } } for (var d = {}, e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++)b(j[c]); return d }; b._i.push([e, f, c])
+                }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g)
+            }
+        })(document, window.mixpanel || []);
     </script>
 
     <script>
         mixpanel.init('9e74f5762d2d9b77491092f3bdb2d53b', { debug: true, track_pageview: true, persistence: 'localStorage' });
-      mixpanel.track('Home page')
+        mixpanel.track('Home page')
     </script>
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11332957548">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11332957548">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'AW-11332957548');
-</script>
+        gtag('config', 'AW-11332957548');
+    </script>
+
+    <style>
+        #submit-email-button {
+            min-width: 90px;
+        }
+
+        #submit-email-button > img {
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -208,7 +234,8 @@
                         </div>
                         <div class="card-content">
                             <h4 class="title is-4">CutStruct</h4>
-                            <p>Cutstruct is the premier digital construction marketplace, offering a seamless one-stop solution for sourcing and delivering construction materials directly to any site.</p>
+                            <p>Cutstruct is the premier digital construction marketplace, offering a seamless one-stop
+                                solution for sourcing and delivering construction materials directly to any site.</p>
                         </div>
                     </div>
                 </a>
@@ -222,7 +249,8 @@
                         </div>
                         <div class="card-content">
                             <h4 class="title is-4">Mizala</h4>
-                            <p>Mizala is a new way of providing insurance to GenZs; with thinks they care more about  and with high flexibility.</p>
+                            <p>Mizala is a new way of providing insurance to GenZs; with thinks they care more about and
+                                with high flexibility.</p>
                         </div>
                     </div>
                 </a>
@@ -236,7 +264,8 @@
                         </div>
                         <div class="card-content">
                             <h4 class="title is-4">Chive GPS</h4>
-                            <p>Chive GPS specializes in funds recovery, e-fraud investigation, background checks, geo-location intelligence, and defense 
+                            <p>Chive GPS specializes in funds recovery, e-fraud investigation, background checks,
+                                geo-location intelligence, and defense
                                 and security services.</p>
                         </div>
                     </div>
@@ -415,7 +444,11 @@
 
                 <div class="field">
                     <div class="control">
-                        <button class="button is-primary" type="submit">Submit</button>
+                        <button id="submit-email-button" class="button is-primary" type="submit">
+                            <span>Submit</span>
+                            <img style="display: none; height: 25px;" height="25px" src="./assets/spinner-solid.svg"
+                                alt="Loading..." />
+                        </button>
                     </div>
                 </div>
             </form>
@@ -436,13 +469,42 @@
     <script src="scripts.js"></script>
 
     <script>
-        // TODO: We need to add a loader after the submit button has been clicked.
         function redirectToCalendly() {
             window.location.href = 'https://calendly.com/theolaakomolafe/meet-with-taika';
         }
+
+        function showSendEmailError(error = '') {
+            const feedbackArticle = document.getElementById('feedback-article');
+            const feedbackDiv = document.getElementById('feedback-div');
+            feedbackDiv.innerText = error ?? 'Sorry an error occurred. We didn\'t receive that.'
+
+            feedbackArticle.style.display = 'block'
+
+            setTimeout(() => {
+                feedbackArticle.style.display = 'none'
+                feedbackDiv.innerText = ''
+            }, 5000)
+        }
+
+        function toggleSubmitButtonLoader() {
+            const submitEmailButton = document.getElementById('submit-email-button');
+
+            if (submitEmailButton.firstElementChild.style.display != 'none') {
+                submitEmailButton.disabled = true
+                submitEmailButton.firstElementChild.style.display = 'none'
+                submitEmailButton.lastElementChild.style.display = 'block'
+            } else {
+                submitEmailButton.disabled = false
+                submitEmailButton.firstElementChild.style.display = 'block'
+                submitEmailButton.lastElementChild.style.display = 'none'
+            }
+        }
+
         function sendEmail(e) {
 
             e.preventDefault();
+
+            toggleSubmitButtonLoader()
 
             const name = document.querySelector("[name='name']").value;
             const email = document.querySelector("[name='email']").value;
@@ -453,7 +515,8 @@
                 "Email: " + email + ". " +
                 "Project Summary: " + summary;
 
-            fetch('https://yosei-aea83cf6fa05.herokuapp.com/custom/taika/send-email', {
+            // https://yosei-aea83cf6fa05.herokuapp.com/custom/taika/send-email
+            fetch('http://localhost:3000/custom/taika/send-email', {
                 method: "POST",
                 mode: "cors",
                 headers: {
@@ -467,18 +530,15 @@
             }).then(function (data) {
                 console.log(data)
 
-                redirectToCalendly()
+                toggleSubmitButtonLoader()
+                if (data.success) {
+                    redirectToCalendly()
+                } else {
+                    showSendEmailError(data.message)
+                }
             }).catch(error => {
-                const feedbackArticle = document.getElementById('feedback-article');
-                const feedbackDiv = document.getElementById('feedback-div');
-                feedbackDiv.innerText = 'Sorry an error occurred. We didn\'t receive that.'
-
-                feedbackArticle.style.display = 'block'
-
-                setTimeout(() => {
-                    feedbackArticle.style.display = 'none'
-                    feedbackDiv.innerText = ''
-                }, 5000)
+                toggleSubmitButtonLoader()
+                showSendEmailError()
             });
         }
 
