@@ -83,3 +83,80 @@
     /* Other responsive adjustments */
     /* ... */
 }
+
+/* Base styles for Our Work section */
+.our-work-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .our-work-section .title {
+    color: #363636; /* Adapting to provided color scheme */
+    margin-bottom: 2rem;
+  }
+  
+  .our-work-section .subtitle {
+    color: #4a4a4a;
+    margin-bottom: 3rem;
+  }
+  
+  /* Card styles for individual projects */
+  .our-work-section .card {
+    box-shadow: 0 2px 4px rgba(10, 10, 10, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .our-work-section .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .our-work-section .card-image img {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+  }
+  
+  .our-work-section .card-content {
+    padding: 1.5rem;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .our-work-section .column {
+      flex: none;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  
+/* Featurette styles */
+.icon.is-large {
+  color: #FFFFFF; /* Adjusted for readability on the colored background */
+}
+
+.service-title {
+  color: #FFFFFF; /* White color for visibility */
+  font-size: 1.25rem; /* Slightly larger font size for visibility */
+  margin-bottom: 0.25rem; /* Space between title and description */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .service-title {
+    font-size: 1rem; /* Adjust font size for mobile devices */
+  }
+  
+  .columns.is-vcentered {
+    justify-content: center; /* Centers the columns for mobile view */
+  }
+
+  /* ...other responsive adjustments... */
+}
+
+@media only screen and (min-width: 769px) {
+  .columns.is-vcentered {
+    justify-content: space-around; /* Evenly spaces the columns for larger view */
+  }
+
+  .column.is-offset-2 {
+    margin-left: 16.66666667%; /* Centers the columns starting from tablet view */
+  }
+}
