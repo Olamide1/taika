@@ -1,32 +1,85 @@
-/* Basic Notion-like colorful styling */
-body {
-    font-family: 'Avenir Next', 'Avenir', sans-serif;
-    background-color: #f5f6f7;
+/* Base styles */
+.hero  {
+    background-color: #48C78E; /* Changed to add color */
+    /* Adjust padding for mobile */
 }
 
+.title, .subtitle {
+    /* Add padding on the sides for smaller screens */
+    color: #070606; /* Ensure text is readable on the new background */
+}
+
+.buttons .button {
+    /* Larger tap area for mobile */
+    border-color: #FFFFFF; /* Add border color for buttons */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    /* Adjust hero padding and title/subtitle sizes for mobile */
+}
+
+/* Add the rest of your styles */
+
+/* Styles for navbar */
 .navbar {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #333; /* Example background color for navbar */
 }
 
-.hero.is-primary {
-    background-color: #2F80ED; /* Notion Blue */
+.navbar-burger span {
+    background-color: #fff; /* Color for burger icon */
 }
 
-.button.is-light {
-    background-color: #FFF;
-    color: #2F80ED;
-}
-/* Pricing Cards Styling */
-.card {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    transition: transform 0.3s;
+.navbar-menu {
+    background-color: #333; /* Background for expanded menu */
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.navbar-item {
+    color: #fff; /* Text color for navbar items */
 }
 
-.card-content {
-    padding: 20px;
+/* Hover styles for navbar items */
+.navbar-item:hover {
+    background-color: #444; /* Slightly lighter background on hover */
+}
+
+/* Active burger icon */
+.navbar-burger.is-active span {
+    background-color: #fff; /* Keep burger icon color consistent when active */
+}
+
+/* Active navbar menu */
+.navbar-menu.is-active {
+    display: block; /* Show the navbar menu when active */
+}
+
+/* Add other styles based on your design requirements */
+/* Existing styles... */
+
+.service-title {
+    color: #ffffff; /* Ensure the title is white */
+    font-size: 1.25rem; /* Slightly larger font size for visibility */
+    margin-bottom: 1rem; /* Space between title and description */
+}
+
+/* Ensure tags are visible */
+.tag {
+    background-color: #4a4a4a; /* Dark background for the tag */
+    color: #ffffff; /* White text for contrast */
+    border: none; /* Remove any default borders */
+    margin-right: 0.5rem; /* Spacing between tags */
+}
+
+/* Additional adjustments for mobile view */
+@media only screen and (max-width: 768px) {
+    .service-title {
+        font-size: 1rem; /* Adjust font size for mobile devices */
+    }
+
+    .tag {
+        font-size: 0.75rem; /* Smaller tags on mobile */
+    }
+
+    /* Other responsive adjustments */
+    /* ... */
 }

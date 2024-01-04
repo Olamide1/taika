@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taika Affiliate Program</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar is-fixed-top is-transparent">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">Taika</a>
+                <span class="navbar-burger" data-target="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="index.html#services">Services</a>
+                    <a class="navbar-item" href="index.html#testimonials">Testimonials</a>
+                    <a class="navbar-item" href="index.html#pricing">Pricing</a>
+                    <a class="navbar-item" href="index.html#contact">Contact</a>
+                    <a class="navbar-item is-active" href="affiliate.html">Affiliate</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero is-primary is-bold is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">Elevate Your Earnings with Taika</h1>
+                <h2 class="subtitle">Join our affiliate program and gain rewards for every referral</h2>
+                <a class="button is-info is-large" href="#affiliate-details">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Details Section -->
+    <section class="section" id="affiliate-details">
+        <div class="container">
+            <h2 class="title">Why Join Taika's Affiliate Program?</h2>
+            <div class="columns">
+                <div class="column is-half">
+                    <h3 class="title is-4">Partner with Excellence</h3>
+                    <p>Collaborate with a brand known for quality and innovation. Extend our reputation to your audience and enhance your credibility in the market.</p>
+                </div>
+                <div class="column is-half">
+                    <h3 class="title is-4">Rewarding Commissions</h3>
+                    <p>Enjoy a competitive commission rate with bonuses for top performers. Our transparent tracking system ensures you get credited for every conversion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps to Join Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title">How to Get Started</h2>
+            <ol class="steps-list">
+                <li><strong>Sign Up:</strong> Complete the online application to join our affiliate program.</li>
+                <li><strong>Spread the Word:</strong> Use your unique affiliate link to introduce Taika to your network.</li>
+                <li><strong>Earn Rewards:</strong> Receive commissions for each new client that signs up through your referral.</li>
+            </ol>
+            <div class="has-text-centered">
+                <a class="button is-primary" href="mailto:ola@taikalabs.tech, chuks@taikalabs.tech">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commission Structure Section -->
+    <section class="section" id="commission-structure">
+        <div class="container">
+            <h2 class="title">Commission Structure</h2>
+            <p>Our straightforward commission structure is designed to benefit our affiliates:</p>
+            <ul>
+                <li><strong>Standard Commission:</strong> Earn 10% of every sale made through your affiliate link.</li>
+                <li><strong>Performance Bonuses:</strong> Hit target milestones and receive additional bonuses.</li>
+                <li><strong>No Caps:</strong> There's no limit to how much you can earn. The more you promote, the more you profit.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="title">Frequently Asked Questions</h2>
+            <div class="content">
+                <p><strong>How do I track my referrals?</strong><br>Track your success through our affiliate dashboard with real-time updates on your referrals and earnings.</p>
+                <p><strong>When and how do I get paid?</strong><br>We pay our affiliates monthly via PayPal or bank transfer, following a one-month conversion validation period.</p>
+                <p><strong>Can I promote any Taika service?</strong><br>Yes, you can promote all services offered by Taika. We provide you with a range of promotional materials to support your efforts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section" id="cta">
+        <div class="container has-text-centered">
+            <h2 class="title">Ready to Join?</h2>
+            <p>Become a part of our affiliate family today and start earning.</p>
+            <a class="button is-success is-large" href="mailto:ola@taikalabs.tech, chuks@taikalabs.tech">Sign Up Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>Taika</strong> by Your Company. All rights reserved.</p>
+            <p>Need assistance? Contact our <a href="index.html#contact">support team</a>.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+      
+          // Get all "navbar-burger" elements
+          const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      
+          // Check if there are any navbar burgers
+          if (navbarBurgers.length > 0) {
+      
+            // Add a click event on each of them
+            navbarBurgers.forEach(el => {
+              el.addEventListener('click', () => {
+      
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const targetElement = document.getElementById(target);
+      
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                targetElement.classList.toggle('is-active');
+      
+              });
+            });
+          }
+      
+        });
+      </script>
+</body>
+</html>
