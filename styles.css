@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Base styles */
 .hero  {
     background-color: #48C78E; /* Changed to add color */
