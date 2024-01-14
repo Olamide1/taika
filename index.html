@@ -533,14 +533,14 @@ function gtag_report_conversion(url) {
     <section class="section" id="contact">
         <div class="container">
             <h3 class="title is-3">Connect With Us</h3>
-            <p>Share your project idea, and we’ll help bring it to life.</p>
+            <p>Share your project idea, and we'll help bring it to life.</p>
             
-            <form id="submit-form" class="mt-6">
+            <form action="mailto:chuks@taikalabs.tech; ola@taikalabs.tech" method="get" enctype="text/plain" id="submit-form" class="mt-6">
                 <!-- Name Field -->
                 <div class="field">
                     <label class="label">Name</label>
                     <div class="control">
-                        <input class="input" type="text" name="name" placeholder="Your Name" required>
+                        <input class="input" type="text" name="name" placeholder="Your Name" autocomplete="name" required>
                     </div>
                 </div>
 
@@ -548,7 +548,7 @@ function gtag_report_conversion(url) {
                 <div class="field">
                     <label class="label">Email</label>
                     <div class="control">
-                        <input class="input" type="email" name="email" placeholder="Your Email" required>
+                        <input class="input" type="email" name="email" placeholder="Your Email" autocomplete="email" required>
                     </div>
                 </div>
 
