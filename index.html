@@ -15,20 +15,24 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
-
-
+    <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("Ohk09SsIxUZerlX5z");
+        })();
+    </script>
     <!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1217925676000532');
-    fbq('track', 'PageView');
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1217925676000532');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1217925676000532&ev=PageView&noscript=1"
@@ -64,7 +68,7 @@
                 <h1 class="title">Your MVP, from Concept to Launch in 4-6 weeks!</h1>
                 <h2 class="subtitle">Streamlined Software Solutions for Fast-Moving Businesses.</h2>
                 <div class="buttons is-centered">
-                    <a class="button button-primary" href="https://forms.gle/F648UquALq7TZr289" target="_blank">Book a Free Consultation</a>
+                    <a class="button button-primary" href="#qualifying-form">Book a Free Consultation</a>
                     <a class="button button-secondary" href="#pricing">Discover Our Plans</a>
                 </div>
             </div>
@@ -297,7 +301,7 @@
                         <div class="card-content">
                             <h4>Create your own plan</h4>
                             <p class="price">$x<span>/month</span></p>
-                            <a href="https://forms.gle/F648UquALq7TZr289" class="button">Contact us</a>
+                            <a href="#qualifying-form" class="button">Contact us</a>
                             <ul>
                                 <li>One MVP</li>
                                 <li>Slack updates</li>
@@ -371,7 +375,62 @@
         <div class="container">
             <h3 class="title">Get in Touch</h3>
             <p>Ready to bring your idea to life? Let's talk and make it happen.</p>
-            <a class="button button-primary mt-3" href="https://forms.gle/F648UquALq7TZr289">Book a Call</a>
+            <a class="button button-primary mt-3" href="#qualifying-form">Book a Call</a>
+        </div>
+    </section>
+
+    <section class="section" id="qualifying-form">
+        <div class="container">
+            <h3 class="title">Get Started with a Free Consultation</h3>
+            <form id="consultation-form">
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" name="name" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input class="input" type="email" name="email" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Budget (in $)</label>
+                    <div class="control">
+                        <input class="input" type="number" name="budget" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Project Type</label>
+                    <div class="control">
+                        <div class="select">
+                            <select name="project_type" required>
+                                <option value="Web Design">Web Design</option>
+                                <option value="UI/UX">UI/UX</option>
+                                <option value="MVP Development">MVP Development</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">How soon do you want to start?</label>
+                    <div class="control">
+                        <input class="input" type="text" name="start_time" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Details about the project</label>
+                    <div class="control">
+                        <textarea class="textarea" name="project_details" required></textarea>
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button button-secondary mt-3" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -440,6 +499,31 @@
                     }
                 });
             });
+        });
+    </script>
+
+    <script>
+        document.getElementById('consultation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const templateParams = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                budget: formData.get('budget'),
+                project_type: formData.get('project_type'),
+                start_time: formData.get('start_time'),
+                project_details: formData.get('project_details')
+            };
+
+            emailjs.send('service_3qca5ac', 'template_9fnzdbo', templateParams)
+                .then(function(response) {
+                    alert('Your message has been sent successfully!');
+                    document.getElementById('consultation-form').reset();
+                }, function(error) {
+                    console.error('Failed to send message:', error);
+                    alert('There was an error sending your message.');
+                });
         });
     </script>
 </body>
